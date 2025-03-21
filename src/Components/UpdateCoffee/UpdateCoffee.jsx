@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateCoffee = () => {
 
@@ -20,7 +21,7 @@ const UpdateCoffee = () => {
 
         const updatedCoffee = { name, quantity, supplier, taste, category, details, photo }
 
-        console.log(updatedCoffee);
+        // console.log(updatedCoffee);
 
         // send data to the server
         fetch(`http://localhost:5000/coffee/${_id}`, {
