@@ -21,7 +21,7 @@ const SignUp = () => {
                 const user = { email, createdAt }
                 //new user has been created
 
-                fetch('http://localhost:5000/user', {
+                fetch('https://restart-coffee-crud-server-4fhz4qkwx-md-sufian-jidans-projects.vercel.app/user', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

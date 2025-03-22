@@ -18,7 +18,7 @@ const Users = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 // make sure user is confirmed to delete
-                fetch(`http://localhost:5000/user/${id}`, {
+                fetch(`https://restart-coffee-crud-server-4fhz4qkwx-md-sufian-jidans-projects.vercel.app/user/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -57,11 +57,11 @@ const Users = () => {
                     <tbody>
                         {/* row 1 */}
                         {
-                            users.map(user => <tr key={user?._id}>
-                                <th>1</th>
+                            users.map((user, idx) => <tr key={user?._id}>
+                                <th>{idx + 1}</th>
                                 <td>{user?.email}</td>
                                 <td>{user?.createdAt}</td>
-                                <td></td>
+                                <td>{user?.lastLoggedAt}</td>
                                 <td>
                                     <button
                                         onClick={() => handleDelete(user?._id)}

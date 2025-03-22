@@ -18,7 +18,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    loader: () => fetch('http://localhost:5000/coffee')
+    loader: () => fetch('https://restart-coffee-crud-server-4fhz4qkwx-md-sufian-jidans-projects.vercel.app/coffee')
   },
   {
     path: "/add-coffee",
@@ -27,12 +27,12 @@ const router = createBrowserRouter([
   {
     path: "/update-coffee/:id",
     element: <UpdateCoffee />,
-    loader: ({ params }) => fetch(`http://localhost:5000/coffee/${params?.id}`)
+    loader: ({ params }) => fetch(`https://restart-coffee-crud-server-4fhz4qkwx-md-sufian-jidans-projects.vercel.app/coffee/${params?.id}`)
   },
   {
     path: "/users",
     element: <Users />,
-    loader: () => fetch(`http://localhost:5000/user`)
+    loader: () => fetch(`https://restart-coffee-crud-server-4fhz4qkwx-md-sufian-jidans-projects.vercel.app/user`)
   },
   {
     path: '/signUp',
