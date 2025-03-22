@@ -12,10 +12,10 @@ const SignUp = () => {
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+        // console.log(email, password);
         createUser(email, password)
             .then(result => {
-                console.log(result.user);
+                // console.log(result.user);
 
                 const createdAt = result.user.metadata.creationTime
                 const user = { email, createdAt }
@@ -64,7 +64,7 @@ const SignUp = () => {
                             <button className="btn btn-neutral mt-4">Sign Up</button>
                         </fieldset>
                     </form>
-                    <p>Already have an account? <Link to={'/signIn'} className="text-blue-700">Please Login</Link></p>
+                    <p className="my-3 text-center">Already have an account? <Link to={'/signIn'} className="text-blue-700">Please Login</Link></p>
                 </div>
             </div>
         </div>

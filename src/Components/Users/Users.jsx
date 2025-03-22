@@ -64,7 +64,7 @@ const Users = () => {
                                 <td></td>
                                 <td>
                                     <button
-                                        onClick={() => handleDelete(_id)}
+                                        onClick={() => handleDelete(user?._id)}
                                         className='btn'>X</button>
                                 </td>
                             </tr>)
